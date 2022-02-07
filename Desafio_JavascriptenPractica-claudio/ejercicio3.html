@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h2>
+                Resultado: <span class="resultado"></span>
+            </h2>
+            <div>
+                <div>
+                    <div>
+                        <label for="">Valor 1</label>
+                        <input id="valor1" type="text">
+                    </div>
+                    <div>
+                        <label for="">Valor 2</label>
+                        <input id="valor2" type="text">
+                    </div>
+                    <div style="display: flex">
+                        <button id="btn-sumar" type="button">
+                            Sumar
+                        </button>
+                        <button id="btn-restar" type="button">
+                            Restar
+                        </button>
+                    </div>
+                    <div id="resultado">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+let valor1 = document.getElementById("valor1")
+let valor2 = document.getElementById("valor2")
+const sumar = document.getElementById("btn-sumar")
+const restar = document.getElementById("btn-restar")
+const resultado = document.getElementById("resultado")
+
+sumar.addEventListener("click", function() {
+    resultado.innerHTML = ""
+    console.log(valor1.value)
+    console.log(valor2.value)
+    let suma = parseInt(valor1.value) + parseInt(valor2.value)
+    console.log(suma)
+    resultado.innerHTML = `el resultado es ${suma}`
+
+})
+
+restar.addEventListener("click", function() {
+    resultado.innerHTML = ""
+    console.log(valor1.value)
+    console.log(valor2.value)
+    // console.log(resta)
+    let resta = parseInt(valor1.value) - parseInt(valor2.value)
+    console.log(resta)
+    resultado.innerHTML = `el resultado es ${resta}`
+
+})
+
+    </script>
+</body>
+
+</html>
